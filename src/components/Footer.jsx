@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" bg-black text-white p-14 fixed bottom-0">
+    <div className=" bg-black text-white p-14 ">
       <div className="grid justify-items-center grid-cols-5 gap-6 pb-5 bg-black text-white">
         <div>
           <h1 className=" text-white text-2xl font-bold">Job Finder</h1>
