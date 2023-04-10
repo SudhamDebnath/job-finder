@@ -10,6 +10,9 @@ import Jobs from "./components/Jobs";
 import Applied from "./components/Applied";
 
 
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch('jobs.json'),
       },
       {
         path: "/header",
@@ -34,7 +38,9 @@ const router = createBrowserRouter([
       {
         path: "/footer",
         element: <Footer></Footer>,
-      },      
+      }, 
+    
+     
     ],
   },
 ]);

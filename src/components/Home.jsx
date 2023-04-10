@@ -1,6 +1,13 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+
+  const {jobs} = useLoaderData()
+
+  console.log(jobs);
+
+
   return (
     <div className="p-10">
       <div className="flex bg-slate-300">
@@ -30,7 +37,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="flex justify-between">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-20">
           <div className=" bg-slate-400 p-6 rounded">
             <div className="bg bg-slate-300 p-3 rounded">
               <img src="/src/assets/Icons/accounts 1.png" alt="" />
@@ -73,119 +80,52 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        
 
-          <div className=" border p-6 rounded">
-            <div className=" p-3 ">
-              <img src="/src/assets/Logo/google-1-1 1-1.png" alt="" />
-            </div>
-            <h1>Technical Database Engineer</h1>
-            <p>Google LLC</p>
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
 
-            <div className="flex gap-4">
-              <button className="btn btn-outline btn-primary">Remote</button>
-
-              <button className="btn btn-outline btn-primary">Full Time</button>
-            </div>
-
-            <div className="flex gap-3">
-              <div>
-              {/* <img src="/src/assets/Icons/Frame-4.png" alt="" /> */}
-              <p> Dhaka, Bangladesh</p>
+        {
+            jobs.slice(0,4).map(jobs => (
+        
+        
+              <div className=" border p-6 rounded">
+              <div className=" p-3 ">
+                <img className=" w-20 " src={jobs.companyLogo} alt="" />
               </div>
-              <div>
-              {/* <img src="/src/assets/Icons/Frame.png" alt="" /> */}
-              <p> Salary : 100K - 150K</p>
+                <h1>{ jobs.jobTitle}</h1>
+                <p>{ jobs.companyName}</p>
+  
+              <div className="flex gap-4">
+                  <button className="btn btn-outline btn-primary">{ jobs.remoteOrOnsite}</button>
+  
+                  <button className="btn btn-outline btn-primary">{ jobs.fulltimeOrParttime}</button>
               </div>
-            </div>
-
-            
-            <button className="btn btn-primary">View Details</button>
-          </div>
-          <div className=" border p-6 rounded">
-            <div className=" p-3 ">
-              <img src="/src/assets/Logo/google-1-1 1-1.png" alt="" />
-            </div>
-            <h1>Technical Database Engineer</h1>
-            <p>Google LLC</p>
-
-            <div className="flex gap-4">
-              <button className="btn btn-outline btn-primary">Remote</button>
-
-              <button className="btn btn-outline btn-primary">Full Time</button>
-            </div>
-
-            <div className="flex gap-3">
-              <div>
-              {/* <img src="/src/assets/Icons/Frame-4.png" alt="" /> */}
-              <p> Dhaka, Bangladesh</p>
+  
+              <div className="flex gap-3">
+                <div>
+                {/* <img src="/src/assets/Icons/Frame-4.png" alt="" /> */}
+                    <p> { jobs.location}</p>
+                </div>
+                <div>
+                {/* <img src="/src/assets/Icons/Frame.png" alt="" /> */}
+                    <p>Salary: {jobs.salary }</p>
+                </div>
               </div>
-              <div>
-              {/* <img src="/src/assets/Icons/Frame.png" alt="" /> */}
-              <p> Salary : 100K - 150K</p>
-              </div>
+  
+              
+              <button className="btn btn-primary">View Details</button>
             </div>
+        
+              ))
+      }
 
-            
-            <button className="btn btn-primary">View Details</button>
-          </div>
-          <div className=" border p-6 rounded">
-            <div className=" p-3 ">
-              <img src="/src/assets/Logo/google-1-1 1-1.png" alt="" />
-            </div>
-            <h1>Technical Database Engineer</h1>
-            <p>Google LLC</p>
-
-            <div className="flex gap-4">
-              <button className="btn btn-outline btn-primary">Remote</button>
-
-              <button className="btn btn-outline btn-primary">Full Time</button>
-            </div>
-
-            <div className="flex gap-3">
-              <div>
-              {/* <img src="/src/assets/Icons/Frame-4.png" alt="" /> */}
-              <p> Dhaka, Bangladesh</p>
-              </div>
-              <div>
-              {/* <img src="/src/assets/Icons/Frame.png" alt="" /> */}
-              <p> Salary : 100K - 150K</p>
-              </div>
-            </div>
-
-            
-            <button className="btn btn-primary">View Details</button>
-          </div>
-          <div className=" border p-6 rounded">
-            <div className=" p-3 ">
-              <img src="/src/assets/Logo/google-1-1 1-1.png" alt="" />
-            </div>
-            <h1>Technical Database Engineer</h1>
-            <p>Google LLC</p>
-
-            <div className="flex gap-4">
-              <button className="btn btn-outline btn-primary">Remote</button>
-
-              <button className="btn btn-outline btn-primary">Full Time</button>
-            </div>
-
-            <div className="flex gap-3">
-              <div>
-              {/* <img src="/src/assets/Icons/Frame-4.png" alt="" /> */}
-              <p> Dhaka, Bangladesh</p>
-              </div>
-              <div>
-              {/* <img src="/src/assets/Icons/Frame.png" alt="" /> */}
-              <p> Salary : 100K - 150K</p>
-              </div>
-            </div>
-
-            
-            <button className="btn btn-primary">View Details</button>
-          </div>
+         
 
         </div>
       </div>
+
+      <button className="btn btn-primary m-9">See All Jobs</button>
+
     </div>
   );
 };
