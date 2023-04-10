@@ -34,9 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/footer",
         element: <Footer></Footer>,
-      },
-      
-
+      },      
     ],
   },
 ]);
