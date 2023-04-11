@@ -3,7 +3,7 @@ import React from 'react';
 const Statistics = () => {
     return (
         <div>
-            This is Statistics
+            <h1 className='text-blue-600 font-bold text-center'> Statistics </h1>
         </div>
     );
 };
