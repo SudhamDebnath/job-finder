@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="grid justify-items-center lg:grid-cols-5 sm:grid-cols-1 gap-6 pb-5 bg-black text-white">
         <div>
           <h1 className=" text-white text-2xl font-bold">Job Finder</h1>
-          <p>
+          <p className="my-5">
             There are many variations of passages of Lorem Ipsum , but the
             majority have suffered alteration in some form.
           </p>

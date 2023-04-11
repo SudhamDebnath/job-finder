@@ -1,16 +1,16 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Job from "./Job";
 
 const Home = () => {
+  const { jobs } = useLoaderData();
 
-  const {jobs} = useLoaderData()
-
-  console.log(jobs);
 
 
   return (
     <div className="p-10">
-      <div className="flex bg-slate-300">
+
+      <div className=" grid grid-cols-2 bg-slate-300">
         <div className=" p-16 ">
           <h1 className="text-5xl font-bold">One Step Closer To Your</h1>
           <span className="text-5xl font-bold text-indigo-700">Dream Job</span>
@@ -38,30 +38,30 @@ const Home = () => {
         </div>
 
         <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-20">
-          <div className=" bg-slate-400 p-6 rounded">
-            <div className="bg bg-slate-300 p-3 rounded">
+          <div className=" bg-slate-400 p-6  rounded">
+            <div className="bg bg-slate-300 p-3 w-16 rounded">
               <img src="/src/assets/Icons/accounts 1.png" alt="" />
             </div>
             <h1>Account & Finance</h1>
             <p>300 Jobs Available</p>
           </div>
           <div className=" bg-slate-400 p-6 rounded">
-            <div className="bg bg-slate-300 p-3 rounded">
-              <img src="/src/assets/Icons/accounts 1.png" alt="" />
+            <div className="bg bg-slate-300 p-3 w-16 rounded">
+              <img src="/src/assets/Icons/business 1.png" alt="" />
             </div>
             <h1>Account & Finance</h1>
             <p>300 Jobs Available</p>
           </div>
           <div className=" bg-slate-400 p-6 rounded">
-            <div className="bg bg-slate-300 p-3 rounded">
-              <img src="/src/assets/Icons/accounts 1.png" alt="" />
+            <div className="bg bg-slate-300 p-3 w-16 rounded">
+              <img src="/src/assets/Icons/social-media 1.png" alt="" />
             </div>
             <h1>Account & Finance</h1>
             <p>300 Jobs Available</p>
           </div>
           <div className=" bg-slate-400 p-6 rounded">
-            <div className="bg bg-slate-300 p-3 rounded">
-              <img src="/src/assets/Icons/accounts 1.png" alt="" />
+            <div className="bg bg-slate-300 p-3 w-16 rounded">
+              <img src="/src/assets/Icons/chip 1.png" alt="" />
             </div>
             <h1>Account & Finance</h1>
             <p>300 Jobs Available</p>
@@ -80,52 +80,20 @@ const Home = () => {
           </p>
         </div>
 
-        
-
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
 
-        {
-            jobs.slice(0,4).map(jobs => (
-        
-        
-              <div className=" border p-6 rounded">
-              <div className=" p-3 ">
-                <img className=" w-20 " src={jobs.companyLogo} alt="" />
-              </div>
-                <h1>{ jobs.jobTitle}</h1>
-                <p>{ jobs.companyName}</p>
-  
-              <div className="flex gap-4">
-                  <button className="btn btn-outline btn-primary">{ jobs.remoteOrOnsite}</button>
-  
-                  <button className="btn btn-outline btn-primary">{ jobs.fulltimeOrParttime}</button>
-              </div>
-  
-              <div className="flex gap-3">
-                <div>
-                {/* <img src="/src/assets/Icons/Frame-4.png" alt="" /> */}
-                    <p> { jobs.location}</p>
-                </div>
-                <div>
-                {/* <img src="/src/assets/Icons/Frame.png" alt="" /> */}
-                    <p>Salary: {jobs.salary }</p>
-                </div>
-              </div>
-  
-              
-              <button className="btn btn-primary">View Details</button>
-            </div>
-        
-              ))
-      }
-
-         
+          {jobs.slice(0, 4).map((job) => (
+            <Job
+              key={job.id}
+              job={job}
+            ></Job>
+          ))
+          }
 
         </div>
       </div>
 
       <button className="btn btn-primary m-9">See All Jobs</button>
-
     </div>
   );
 };

@@ -8,10 +8,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Jobs from "./components/Jobs";
 import Applied from "./components/Applied";
-
-
-
-
+import Blogs from "./components/Blogs";
+import Statistics from "./components/Statistics";
 
 const router = createBrowserRouter([
   {
@@ -21,26 +19,41 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('jobs.json'),
+        loader: () => fetch("jobs.json"),
       },
       {
-        path: "/header",
+        path: "header",
         element: <Header></Header>,
       },
       {
-        path: "/jobs",
+        path: "jobs/:id",
         element: <Jobs></Jobs>,
+        loader: ({ params }) =>
+          fetch(`/jobs.json`)
+            .then((response) => response.json())
+            .then((data) => {
+              const job = data.jobs.find(
+                (job) => job.id === parseInt(params.id)
+              );
+              return { job };
+            }),
       },
       {
-        path: "/applied",
+        path: "applied",
         element: <Applied></Applied>,
       },
       {
-        path: "/footer",
+        path: "footer",
         element: <Footer></Footer>,
-      }, 
-    
-     
+      },
+      {
+        path: "blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "statistics",
+        element: <Statistics></Statistics>,
+      },
     ],
   },
 ]);
