@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="p-10">
 
-      <div className=" grid grid-cols-2 bg-slate-300">
+      <div className=" grid lg:grid-cols-2 sm:grid-cols-1 bg-slate-300">
         <div className=" p-16 ">
           <h1 className="text-5xl font-bold">One Step Closer To Your</h1>
           <span className="text-5xl font-bold text-indigo-700">Dream Job</span>
