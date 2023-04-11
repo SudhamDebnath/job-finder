@@ -17,7 +17,7 @@ const ErrorPage = () => {
             {error?.message}
           </p>
           <Link to='/' className='btn btn-primary'>
-            Back to homepage
+            Back to Homepage!!!
           </Link>
         </div>
       </div>
