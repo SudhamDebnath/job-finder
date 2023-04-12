@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Job from "./Job";
 
 const Home = () => {
+
   const { jobs } = useLoaderData();
 
+  const [showAllJobs, setShowAllJobs] = useState(false);
+
+  // Handle See All Jobs Button
+
+  const handleSeeAllJobsClick = () => {
+    setShowAllJobs(true);
+  };
+
+  const jobList = showAllJobs ? jobs : jobs.slice(0, 4);
 
 
   return (
@@ -82,10 +92,12 @@ const Home = () => {
 
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
 
-          {jobs.slice(0, 4).map((job) => (
+          {jobList.map((job) => (
             <Job
+              
               key={job.id}
               job={job}
+              
             ></Job>
           ))
           }
@@ -95,7 +107,7 @@ const Home = () => {
 
       <div className="flex justify-center my-5">
 
-      <button className="btn btn-primary m-9">See All Jobs</button>
+      <button className="btn btn-primary m-9" onClick={handleSeeAllJobsClick}>See All Jobs</button>
       </div>
     </div>
   );

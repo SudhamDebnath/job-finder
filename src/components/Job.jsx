@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
+  
+  
   return (
     <div>
       <div className=" border border-violet-500 p-6 rounded ">

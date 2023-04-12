@@ -4,7 +4,7 @@ const Applied = () => {
 
   const appliedJob = JSON.parse(localStorage.getItem("appliedJob"));
 
-  console.log(appliedJob);
+  
 
   return (
     <div>
