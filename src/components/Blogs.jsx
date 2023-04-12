@@ -3,7 +3,22 @@ import React from "react";
 const Blogs = () => {
   return (
     <div>
-      <h1 className='text-blue-600 font-bold text-center bg-slate-100 p-20'>Blogs</h1>
+      
+      <div className='static'>
+      <h1 className='text-blue-600 font-bold text-center text-3xl bg-slate-100 p-20'>Blogs</h1>
+        <div className='absolute top-0 right-0'>
+          
+        <img src="/src/assets/All Images/Vector-1.png" alt="" />
+        </div>
+        
+        <div className='relative'>
+
+        <div className='absolute bottom-0 left-0'>
+          <img src="/src/assets/All Images/Vector.png" alt="" />
+        </div>
+        </div>
+
+      </div>
 
       <article className="max-w-2xl px-6 py-24 mx-auto space-y-12  text-black">
         <div className="w-full mx-auto space-y-4 text-center">

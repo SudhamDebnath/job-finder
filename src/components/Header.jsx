@@ -7,7 +7,7 @@ const Header = () => {
       <div className="navbar">
         <div className="navbar-start">
        
-          <Link to="/" className=" normal-case text-2xl font-bold">
+          <Link to="/" className="text-3xl font-bold">
             Job Finder
           </Link>
         </div>
@@ -20,15 +20,17 @@ const Header = () => {
             >
               Home
             </NavLink>
-          </li>
-          <li>
+            </li>
+            
+          {/* <li>
             <NavLink
               to='/jobs'
               className={({ isActive }) => (isActive ? ' text-blue-600 font-bold ' : '')}
             >
               Jobs Details
             </NavLink>
-          </li>
+          </li> */}
+            
           <li>
             <NavLink
               to='/applied'

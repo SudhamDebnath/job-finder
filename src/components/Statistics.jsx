@@ -10,23 +10,38 @@ import {
 } from "recharts";
 
 const Statistics = () => {
-
   const data = [
-      { x: 1, y: 57 },
-      { x: 2, y: 55 },
-      { x: 3, y: 56 },
-      { x: 4, y: 59 },
-      { x: 5, y: 53 },
-      { x: 6, y: 54 },
-      { x: 7, y: 58 },
-      { x: 8, y: 60 },
+    { x: 1, y: 57 },
+    { x: 2, y: 55 },
+    { x: 3, y: 56 },
+    { x: 4, y: 59 },
+    { x: 5, y: 53 },
+    { x: 6, y: 54 },
+    { x: 7, y: 58 },
+    { x: 8, y: 60 },
   ];
 
   return (
-      <div>
-          <h1 className='text-blue-600 font-bold text-center bg-slate-100 p-20'>Assignment Mark</h1>
+    <div>
+    
+    <div className='static'>
+      <h1 className='text-blue-600 font-bold text-center text-3xl bg-slate-100 p-20'>Assignment Marks</h1>
+        <div className='absolute top-0 right-0'>
           
+        <img src="/src/assets/All Images/Vector-1.png" alt="" />
+        </div>
+        
+        <div className='relative'>
 
+        <div className='absolute bottom-0 left-0'>
+          <img src="/src/assets/All Images/Vector.png" alt="" />
+        </div>
+        </div>
+
+      </div>
+
+      
+      <div className=" m-20">
       <ResponsiveContainer width="100%" height={400}>
         <ScatterChart
           margin={{
@@ -43,6 +58,8 @@ const Statistics = () => {
           <Scatter name="Assignment" data={data} fill="#8884d8" />
         </ScatterChart>
       </ResponsiveContainer>
+      </div>
+      
     </div>
   );
 };
