@@ -7,7 +7,9 @@ const Applied = () => {
 
   return (
     <div>
-      <h1 className='text-blue-600 font-bold text-center'>Applied Jobs</h1>
+      
+      <h1 className='text-blue-600 font-bold text-center bg-slate-100 p-20'>Applied Jobs</h1>
+
       {appliedJob && (
               
 

@@ -24,8 +24,8 @@ const Statistics = () => {
 
   return (
       <div>
+          <h1 className='text-blue-600 font-bold text-center bg-slate-100 p-20'>Assignment Mark</h1>
           
-          <h1 className='text-blue-600 font-bold text-center'>Assignment Mark</h1>
 
       <ResponsiveContainer width="100%" height={400}>
         <ScatterChart

@@ -3,8 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="px-10 pt-5">
-      <div className="navbar bg-base-100">
+    <div className="px-14 py-5 bg-slate-100">
+      <div className="navbar">
         <div className="navbar-start">
        
           <Link to="/" className=" normal-case text-2xl font-bold">
