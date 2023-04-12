@@ -22,7 +22,7 @@ const Home = () => {
           <button className="btn btn-primary">Get Started</button>
         </div>
         <div>
-          <img src="/src/assets/All Images/P3OLGJ1 copy 1.png" alt="" />
+          <img src="https://i.ibb.co/m52NHsB/P3-OLGJ1-copy-1.png" alt="" />
         </div>
       </div>
 
@@ -40,28 +40,28 @@ const Home = () => {
         <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-20">
           <div className=" bg-slate-100 p-6 rounded  ">
             <div className="bg bg-slate-200 p-3 w-16 rounded">
-              <img src="/src/assets/Icons/accounts 1.png" alt="" />
+              <img src="https://i.ibb.co/7jYwK05/accounts-1.png" alt="" />
             </div>
             <h1 className=" text-xl text-bold py-4">Account & Finance</h1>
             <p className="font-medium">300+ Jobs Available</p>
           </div>
           <div className=" bg-slate-100 p-6 rounded">
             <div className="bg bg-slate-200 p-3 w-16 rounded">
-              <img src="/src/assets/Icons/business 1.png" alt="" />
+              <img src="https://i.ibb.co/Bz90HMf/business-1.png" alt="" />
             </div>
             <h1 className=" text-xl text-bold py-4">Creative Design</h1>
             <p className="font-medium">100+ Jobs Available</p>
           </div>
           <div className=" bg-slate-100 p-6 rounded">
             <div className="bg bg-slate-200 p-3 w-16 rounded">
-              <img src="/src/assets/Icons/social-media 1.png" alt="" />
+              <img src="https://i.ibb.co/GdVhPww/social-media-1.png" alt="" />
             </div>
             <h1 className=" text-xl text-bold py-4">Marketing & Sales</h1>
             <p className="font-medium">300 Jobs Available</p>
           </div>
           <div className=" bg-slate-100 p-6 rounded">
             <div className="bg bg-slate-200 p-3 w-16 rounded">
-              <img src="/src/assets/Icons/chip 1.png" alt="" />
+              <img src="https://i.ibb.co/Dz3NpqJ/chip-1.png" alt="" />
             </div>
             <h1 className=" text-xl text-bold py-4">Engineering Job</h1>
             <p className="font-medium">224 Jobs Available</p>

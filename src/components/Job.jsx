@@ -25,13 +25,13 @@ const Job = ({ job }) => {
           <div className="flex">
             <img
               className=" p-0 m-0 "
-              src="/src/assets/Icons/Frame-4.png"
+              src="https://i.ibb.co/cXVd5Pn/Frame-4.png"
               alt=""
             />
             <p className=" font-semibold text-gray-500"> {job.location}</p>
           </div>
           <div className="flex">
-            <img src="/src/assets/Icons/Frame.png" alt="" />
+            <img src="https://i.ibb.co/gWbWKZ7/Frame.png" alt="" />
             <p className=" font-semibold text-gray-500">Salary: {job.salary}</p>
           </div>
         </div>

@@ -14,12 +14,12 @@ const Applied = () => {
           Applied Jobs
         </h1>
         <div className="absolute top-0 right-0">
-          <img src="/src/assets/All Images/Vector-1.png" alt="" />
+          <img src="https://i.ibb.co/T19wvzn/Vector-1.png" alt="" />
         </div>
 
         <div className="relative">
           <div className="absolute bottom-0 left-0">
-            <img src="/src/assets/All Images/Vector.png" alt="" />
+            <img src="https://i.ibb.co/ssQWSkK/Vector.png" alt="" />
           </div>
         </div>
       </div>
@@ -55,13 +55,13 @@ const Applied = () => {
               <div className="flex">
                 <img
                   className=" p-0 m-0 "
-                  src="/src/assets/Icons/Frame-4.png"
+                  src="https://i.ibb.co/cXVd5Pn/Frame-4.png"
                   alt=""
                 />
                 <p className=" font-semibold "> {appliedJob.location}</p>
               </div>
               <div className="flex">
-                <img src="/src/assets/Icons/Frame.png" alt="" />
+                <img src="https://i.ibb.co/gWbWKZ7/Frame.png" alt="" />
                 <p className=" font-semibold ">Salary: {appliedJob.salary}</p>
               </div>
             </div>
