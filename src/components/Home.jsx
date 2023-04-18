@@ -106,9 +106,9 @@ const Home = () => {
       </div>
 
       <div className="flex justify-center my-5">
-
       <button className="btn btn-primary m-9" onClick={handleSeeAllJobsClick}>See All Jobs</button>
       </div>
+
     </div>
   );
 };
